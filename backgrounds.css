@@ -1,0 +1,22 @@
+/*
+CSS background properties:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+https://www.w3schools.com/css/css_background.asp
+*/
+
+h1{
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+ul{
+  background-image: url("python.png");
+  background-repeat: no-repeat; /* don't repeat image... repeat-x*/
+  background-position: center top;
+  opacity: 0.3;
+}
