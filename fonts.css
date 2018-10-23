@@ -1,0 +1,18 @@
+/*
+The CSS font properties define the font family, boldness, size, and the style of a text.
+If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
+Start with the font you want, and end with a generic family, to let the browser pick a similar font in 
+the generic family, if no other fonts are available.
+*/
+
+h1{
+  font-family: "Times New Roman", Times, serif;	
+}
+
+section{
+  font-style: normal;  
+}
+
+footer{
+  font-style: italic;	
+}
