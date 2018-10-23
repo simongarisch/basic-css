@@ -1,0 +1,35 @@
+/*
+CSS border properties allow you to specify the style, width, and color of an element's border.
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+https://www.w3schools.com/css/css_border.asp
+
+*/
+
+h1{
+  background-color: rgba(0, 0, 255, 0.2);
+  border-style: dashed;
+  border-color: blue;
+  border-width: 3px;
+  border-bottom-style: dotted;
+  width: 50%;
+}
+
+nav{
+  background-color: rgba(0, 255, 0, 0.1);
+  border-style: dashed;
+  border-width: 2px;
+  border-color: green;
+  width: 50%;
+  border-radius: 10px; /* for a rounded border */
+}
