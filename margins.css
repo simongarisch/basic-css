@@ -1,0 +1,22 @@
+/*
+The CSS margin properties are used to create space around elements, outside of any defined borders.
+https://www.w3schools.com/css/css_margin.asp
+*/
+
+h1{
+  background-color: rgba(0, 0, 255, 0.2);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+nav{
+  background-color: rgba(0, 255, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+section{
+  background-color: rgba(255, 0, 0, 0.2);
+  margin: 25px 50px 75px 100px; /* top right bottom left */
+}
