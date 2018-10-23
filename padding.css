@@ -1,0 +1,33 @@
+/*
+The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+padding: 25px 50px;
+top and bottom paddings are 25px
+right and left paddings are 50px
+
+*/
+
+h1{
+  background-color: rgba(0, 0, 255, 0.2);
+  padding-top: 75px;
+  padding-bottom: 75px;
+  border-style: dotted;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+nav{
+  background-color: rgba(0, 255, 0, 0.2);
+  padding: 20px 10px 20px 10px; /* top right bottom left */
+  border-style: dotted;
+  text-align: center;
+}
+
+section{
+  background-color: rgba(255, 0, 0, 0.2);
+  border-style: dashed;  
+}
