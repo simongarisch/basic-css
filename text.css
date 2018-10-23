@@ -1,0 +1,36 @@
+/*
+There are a number of text based options
+https://www.w3schools.com/css/css_text.asp
+*/
+
+h1{
+  background-color: rgba(255, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: underline;
+  padding: 25px;
+  margin: 10px 50px;  
+}
+
+nav{
+  text-align: right;
+  text-transform: capitalize;
+  padding: 25px;
+  margin: 10px 50px;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+a{
+  padding: 10px;	
+}
+
+section{
+  background-color: rgba(0, 0, 255, 0.2);
+  padding: 25px;
+  margin: 10px 50px;  
+}
+
+footer{
+  background-color: rgba(100, 100, 100, 0.2);
+  padding: 25px;
+  margin: 10px 50px;  
+}
