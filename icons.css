@@ -1,0 +1,14 @@
+/*
+The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.
+Looks like there are font awesome, bootstrap and google icons available.
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+These icons are in the html
+*/
+
+h1{
+  background-color: rgba(255,0, 0, 0.2);  
+}
+
+footer{
+  background-color: rgba(0, 255, 0, 0.2);
+}
