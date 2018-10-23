@@ -1,0 +1,19 @@
+/*
+Styling lists
+https://www.w3schools.com/css/css_list.asp
+*/
+
+ul {
+  list-style-image: url("rocket.png");
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+  width:50%;
+}
+
+ul li {
+  background: #cce5ff;
+  margin: 5px;
+}
