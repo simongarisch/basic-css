@@ -1,0 +1,19 @@
+/*
+
+The CSS float property specifies how an element should float.
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side.
+
+float: left right none inherit
+
+See more on float: https://www.w3schools.com/css/css_float.asp
+*/
+
+table {
+  max-width: 200px;
+}
+
+.links{ /* style the links class */
+  float: right;	
+}
+
