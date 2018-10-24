@@ -1,0 +1,15 @@
+/*
+Using width and max-width
+*/
+
+nav{
+  max-width: 50px;	
+}
+
+table{
+  max-width: 300px;	
+}
+
+table th td{
+  text-align: left;	
+}
