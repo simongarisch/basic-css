@@ -1,0 +1,10 @@
+/* as its name suggests */
+
+table{
+  opacity: 0.5;
+  display: inline;
+}
+
+table:hover{
+  opacity: 1.0;	
+}
