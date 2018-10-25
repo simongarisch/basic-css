@@ -1,0 +1,35 @@
+/*
+A combinator is something that explains the relationship between the selectors.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+
+*/
+
+/* descendant selector
+   style the a items in nav
+*/
+nav a{
+  padding: 20px;  
+}
+
+/* 
+child selector selects all elements that are the immediate children
+in this case all paragraphs of the section tag
+*/
+section > p{
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.1);	
+}
+
+/*
+adjacent sibling selector (+)
+he following example selects all <li> elements that are placed immediately after <ul> elements
+*/
+ul > li{
+  background-color: rgba(0, 0, 255, 0.1);	
+}
