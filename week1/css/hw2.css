@@ -1,0 +1,70 @@
+
+/* submission for week 2 */
+
+/* don't remove the images this time */
+/*
+aside{
+  display: none;	
+}
+*/
+
+/* change the default body margin and padding */
+body {
+  margin: 5px 10px;
+  padding: 5px 10px;
+}
+
+/* working with the header first 
+   create a header image and pad to approximate target size 
+*/
+header{
+  background: #ffffff url(http://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg) no-repeat;
+  background-size: 100%;
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
+
+/* title header should be uppercase in white */
+header h1{
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+
+/* rework the nav */
+nav{
+  text-align:center;
+}
+
+nav a{
+  padding: 20px 30px;
+  margin: 0 40px;
+  display: inline-block;
+  width: 10%;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(200, 200, 200, 0.5);
+  text-decoration: none;
+  border-radius: 10px;  
+}
+
+nav a:active {
+  background-color: #ffffff;
+}
+
+nav a:selected{
+  background-color: #ffffff;
+}
+
+nav a:hover{
+  background-color: rgba(200, 200, 200, 1); 
+}
+
+h2{
+  color: rgba(0, 50, 140, 1);
+  text-transform: uppercase;
+}
+
+section{
+  background-color: rgba(130, 130, 130, 1);	
+}
+
