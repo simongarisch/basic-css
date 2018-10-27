@@ -1,0 +1,34 @@
+
+/* submission for week 1 */
+
+/* images in this case are in the aside tag 
+   set display as none in this case */
+aside{
+  display: none;	
+}
+
+/* working with the header first */
+header{
+  background-color: rgba(185, 185, 185, 1);
+}
+
+header h1{
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+
+h2{
+  color: rgba(0, 50, 140, 1);
+  text-transform: uppercase;
+}
+
+section{
+  background-color: rgba(130, 130, 130, 1);	
+}
+
+a{
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(200, 200, 200, 1);  
+}

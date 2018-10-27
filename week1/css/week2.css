@@ -1,13 +1,6 @@
 
 /* submission for week 2 */
 
-/* don't remove the images this time */
-/*
-aside{
-  display: none;	
-}
-*/
-
 /* change the default body margin and padding */
 body {
   margin: 5px 10px;
@@ -18,10 +11,10 @@ body {
    create a header image and pad to approximate target size 
 */
 header{
-  background: #ffffff url(http://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg) no-repeat;
+  background: #ffffff url(../images/flywheel.jpg) no-repeat;
   background-size: 100%;
   padding-top: 15px;
-  padding-bottom: 45px;
+  padding-bottom: 60px;
 }
 
 /* title header should be uppercase in white */
@@ -29,6 +22,7 @@ header h1{
   text-align: center;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
+  font-size: 150%;
 }
 
 /* rework the nav */
@@ -47,11 +41,9 @@ nav a{
   border-radius: 10px;  
 }
 
-nav a:active {
-  background-color: #ffffff;
-}
-
-nav a:selected{
+/* style the active class so people know which
+   navigation item they are on */
+nav a.active {
   background-color: #ffffff;
 }
 
@@ -59,12 +51,26 @@ nav a:hover{
   background-color: rgba(200, 200, 200, 1); 
 }
 
-h2{
-  color: rgba(0, 50, 140, 1);
-  text-transform: uppercase;
+/* now for the left and right class */
+.left{
+  display: inline-block;
+  background-color: rgba(200, 100, 100, 0.4);
+  width: 25%;
+  float: left;
+  padding-bottom: 75px;
 }
 
-section{
-  background-color: rgba(130, 130, 130, 1);	
+.left img{
+  display: block;
+  position: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  border: 2px solid rgba(0, 0, 0, 1);
 }
 
+.right{
+  display: inline-block;
+  width: 70%;
+  margin: 5px;
+}
