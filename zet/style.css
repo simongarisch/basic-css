@@ -1,0 +1,57 @@
+/*
+Key takeaways:
+
+-> width left 15%, content 60%, right ad 15%
+
+-> margin auto so that items to not run into each other
+
+-> body line-height: 1.6em and ul line-height: 1.7em in order to space things out
+   and draw more attention to the links
+*/
+
+/* navigation has links to 'Home' and 'Subscribe'
+   'Subscribe' floats to the right
+*/
+.nav_r { float:right; margin:auto;}
+
+/* The body in which everything is sitting */
+body {
+  font-family: georgia;
+  /*font-size: 1em;*/
+  line-height: 1.6em; /* this spaces out the lines and honestly looks better */
+  background: #333;
+  text-align: center;
+  padding: 30px;
+}
+
+/* all of the body content is contained within <div class="container"> 
+   basically done so that the content can be centered in body
+*/
+.container {margin: auto} /* do this to center content on the page */
+
+/* Ebooks section is of the id="ebooks" class="ltow" */
+#ebooks ul { list-style-type: none; padding-left:0; }
+.ltow { float:left; background:white; width:15%; padding-bottom: 30px;}
+
+/* the right section contains googls ads */
+.rtow { float:right; width:15%; color:white;}
+
+h1, h2 {font-family: serif; margin:25px 0 25px 0 }
+a { color:#0099f7 }
+
+ul {line-height: 1.7em} /* space out the unordered lists a bit more */
+
+/* margin auto keeps the content margin from falling back
+   when ebooks list is finished */
+.content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 35px 25px 5px 25px;
+  background: white;
+  text-align: left; /* overrides the body text-align: center */
+}
+
+/* signature and copyright are both in the footer */
+.signature { margin-top:35px; font-size:0.8em; color:#636363; display:inline; }
+.copyright { margin-left:15px; margin-right:15px }
