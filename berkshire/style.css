@@ -1,0 +1,52 @@
+
+header h1{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.bold{
+  font-weight: bold;	
+}
+
+.big{
+  font-size: 150%;
+}
+
+.small{
+  font-size: 60%;	
+}
+
+header{
+  text-align: center;
+}
+
+body{
+  background-color: #ffffff;
+  color: #000080;
+  line-height: 120%;
+}
+
+.announcements{
+  padding-left: 5%;
+  display: inline-block;
+  width: 40%;
+  vertical-align:top
+}
+
+.announcements li{
+  min-height: 50px;	
+}
+
+.redlink{
+  color: rgba(255, 0, 0, 0.8);	
+}
+
+footer p{
+  text-align: center;
+}
+
+.legal{
+  margin-left: 40px;
+  text-align: left;
+  font-size: 80%;
+}
