@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Example of using highlight.js</title>
+  
+  <!-- see https://highlightjs.org/usage/
+	minimum requirements for usage: https://highlightjs.org/usage/
+    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/arta.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <style>
+    code{padding-bottom: 30px; width: 60%;}
+  </style>
+</head>
+
+<body>
+
+<p>
+Here is some Python code...
+<pre><code class="javascript">
+class YamlFilePath(object):
+    ''' A descriptor defining a yaml file path. These must:
+        -> be of the type str
+        -> point to a file that exists
+        -> end with the file extension '.yaml'
+    '''
+    def __init__(self, default=None):
+        self.default = default
+        self.data = WeakKeyDictionary()
+
+    def __get__(self, instance, owner):
+        return self.data.get(instance, self.default)
+
+    def __set__(self, instance, value):
+        # the path must be a string
+        if not isinstance(value, str):
+            raise errors.YamlFilePathTypeError
+
+        # end with '.yaml'
+        if not value.endswith(".yaml"):
+            raise errors.NotAYamlFileError
+
+        # and point to an existing file
+        if not os.path.isfile(value):
+            raise errors.YamlFileMustExistError
+        self.data[instance] = value
+</code></pre>
+</p>
+
+</body>
+
+</html>

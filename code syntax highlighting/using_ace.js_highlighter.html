@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<!-- --------------------------->
+<head>
+<title>Using ace.js</title>
+
+<!-- to use ace.js 
+     https://ace.c9.io/tool/mode_creator.html
+     allows you to inspect languages and their themes	 
+-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+
+<!-- if you do not change the height then it will be zero 
+	 and the editor will not show up -->
+<style type="text/css">
+
+  #jsEditor, #pythonEditor, #rEditor, #rEditorReadOnly{
+    display: inline-block;
+    height: 150px;
+	width: 600px;
+	margin: 20px;
+  }
+  
+  h1, p{text-align: center}
+  h1{margin: 5%;}
+</style>
+</head>
+<!-- --------------------------->
+
+<body>
+  <h1> Embedding an editor into your html </h1>
+  
+  <p>
+  <a href="https://github.com/ajaxorg/ace/tree/master/lib/ace/theme">For a list of available themes</a>
+  <br>
+  <a href="https://ace.c9.io/tool/mode_creator.html">See mode creator for available languages</a>
+  </p>
+  
+  <!-- **************************************** -->
+  <!-- starting with js for available languages -->
+  <div id="jsEditor">
+    // some Javascript code
+    var data = "hello";
+	function say(){
+	  console.log(data);
+	}
+  </div>
+  
+  <!-- now let ace.js know how you want to style -->
+  <script type="text/javascript">
+    var e = ace.edit("jsEditor");
+	e.getSession().setMode("ace/mode/javascript");
+	e.setTheme("ace/theme/solarized_dark");
+  </script>
+  
+  <!-- **************************************** -->
+  <!-- then Python -->
+  <div id="pythonEditor"> <!-- call the id whatever you like -->
+    # moving to a Python example
+	def test_path_is_string():
+		''' all sheet paths must be a string '''
+		with pytest.raises(errors.SheetPathTypeError):
+			Sheet(path=42)
+  </div>
+  
+  <!-- now let ace.js know how you want to style -->
+  <script type="text/javascript">
+    var e = ace.edit("pythonEditor");
+	e.getSession().setMode("ace/mode/python");
+	e.setTheme("ace/theme/solarized_dark");
+  </script>
+  
+  <!-- **************************************** -->
+  <!-- R -->
+  <div id="rEditor"> <!-- call the id whatever you like -->
+    # R example
+	df <- df %>% gather(variable, value, -storm_id, -date,-latitude, -longitude, -storm_id) %>%
+	mutate(wind_speed = purrr::map_chr(strsplit(variable, "_"), function(x){x[2]})) %>%
+	mutate(quadrant = purrr::map_chr(strsplit(variable, "_"), function(x){x[3]})) %>%
+	select(-variable) %>% # we don't need this column anymore
+	spread(quadrant, value)
+  </div>
+  
+  <!-- now let ace.js know how you want to style -->
+  <script type="text/javascript">
+    var e = ace.edit("rEditor");
+	e.getSession().setMode("ace/mode/r");
+	e.setTheme("ace/theme/solarized_dark");
+  </script>
+  
+  <p> If we want to make a section read-only <br>
+      See <a href="https://github.com/ajaxorg/ace/issues/266">here</a>
+	  for details on how to make the editor read-only with e.setOptions({readOnly: true}).
+  </p>
+  <!-- **************************************** -->
+  <!-- R -->
+  <div id="rEditorReadOnly"> <!-- call the id whatever you like -->
+    # R example
+	df <- df %>% gather(variable, value, -storm_id, -date,-latitude, -longitude, -storm_id) %>%
+	mutate(wind_speed = purrr::map_chr(strsplit(variable, "_"), function(x){x[2]})) %>%
+	mutate(quadrant = purrr::map_chr(strsplit(variable, "_"), function(x){x[3]})) %>%
+	select(-variable) %>% # we don't need this column anymore
+	spread(quadrant, value)
+  </div>
+  
+  <!-- now let ace.js know how you want to style -->
+  <script type="text/javascript">
+    var e = ace.edit("rEditorReadOnly");
+	e.getSession().setMode("ace/mode/r");
+	e.setTheme("ace/theme/solarized_dark");
+	e.setOptions({readOnly: true})
+  </script>
+ 
+</body>
+
+</html>
