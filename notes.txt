@@ -12,6 +12,10 @@ Some css frameworks:
 - Foundation
 - Bulma (this has been good to practice with)
   See some of the templates here... https://dansup.github.io/bulma-templates/
+  5 min tutorial: https://medium.freecodecamp.org/learn-bulma-in-5-minutes-ec5188c53e83
+  Also see scrimba https://scrimba.com/g/gbulma
+  Bulma form builder: https://jesobreira.github.io/Bulma-Form-Builder/
+  
 - Materialize (this also looks good)
 
 Important items touched on:
