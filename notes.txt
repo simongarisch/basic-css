@@ -1,0 +1,20 @@
+Potential website sections to replicate:
+- Zetcode
+- Berkshire
+- Excel Easy
+- Jade Language: Node Template Engine
+- Code Mirror
+- quantecon.org
+
+
+Some css frameworks:
+- Bootstrap
+- Foundation
+- Bulma (this has been good to practice with)
+
+Important items touched on:
+- Good editor: Atom, Sublime...
+- emmet https://docs.emmet.io/cheat-sheet/
+  You can download this with Atom and it's very helpful
+- Font awesome has been used in a few of the examples https://fontawesome.com/
+- Looks like quantecon uses Bulma (or something similar), so take a look there.
