@@ -16,6 +16,7 @@
 	
   <!-- see https://highlightjs.org/usage/
 	minimum requirements for usage: https://highlightjs.org/usage/
+	https://github.com/highlightjs/highlight.js/tree/master/src/languages
     -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/arta.min.css">
@@ -84,7 +85,9 @@ recurse_fibonacci <- function(n) {
 </div>
 
 <div id="julia" class="tabcontent">
-<pre><code class="python"> <!-- looks like no highlighting available for Julia yet -->
+<!-- At the time of writing Julia syntax highlighting is busted
+	 https://github.com/highlightjs/highlight.js/issues/622 -->
+<pre><code class="julia">
 rfib(n) = n < 2 ? n : rfib(n-1) + rfib(n-2)
 </code></pre>
 </div>
