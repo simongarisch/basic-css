@@ -1,3 +1,4 @@
+<!-- https://www.youtube.com/watch?v=IiPQYQT2-wg -->
 <!-- see https://docs.emmet.io/cheat-sheet/ -->
 <!--  use ! + tab for document boilerplate -->
 <!--  ctrl + / to toggle comments -->
@@ -368,7 +369,195 @@
   </div>
 
   <!-- THE LEVEL CLASS -->
-  
+  <div class="block">
+    <nav class="level">
+      <!-- left side -->
+      <div class="level left">
+        <p class="level-item"><a href="#"><strong>All</strong></a></p>
+        <p class="level-item"><a href="#">Published</a></p>
+        <p class="level-item"><a href="#">Deleted</a></p>
+        <p class="level-item"><a class="button is-primary"href="#">New</a></p>
+      </div>
+
+      <!-- right side -->
+      <div class="level-right">
+        <div class="level-item">
+          <div class="field">
+            <p class="control">
+              <input type="text" class="input"
+               placeholder="Search posts...">
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <hr>
+
+  <!-- FORMS -->
+  <h1 class="title is-1">Working with forms</h1>
+  <div class="block">
+    <form>
+
+      <div class="field">
+        <label class="label">Name</label>
+        <input type="text" class="input" placeholder="Enter Name">
+      </div>
+
+      <div class="field">
+        <label class="label">Name</label>
+        <input type="text" class="input is-success" placeholder="Enter Name">
+      </div>
+
+      <div class="field">
+        <label class="label">Name</label>
+        <input type="text" class="input is-danger" placeholder="Enter Name">
+      </div>
+
+      <!-- here is a dropdown example -->
+      <div class="field">
+        <p class="control">
+          <span class="select">
+            <select>
+              <!-- option*4 -->
+              <option>Select dropdown</option>
+              <option>Simple</option>
+              <option>Standard</option>
+              <option>Super</option>
+            </select>
+          </span>
+        </p>
+      </div>
+
+      <!-- now for a text area -->
+      <div class="field">
+        <label class="label">
+          <p class="control">
+            <textarea class="textarea" placeholder="Textarea"></textarea>
+          </p>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <!-- ATTACHED -->
+  <div class="block">
+    <div class="field has-addons">
+      <p class="control">
+        <input class="input" placeholder="Enter keywords...">
+      </p>
+      <p class="control">
+        <a href="#" class="button is-info">Search</a>
+      </p>
+    </div>
+  </div>
+  <hr>
+
+  <!-- TABLES -->
+  <div class="block">
+    <table class="table is-striped is-bordered is-narrow">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="is-selected">
+          <td>Rick Grimes</td>
+          <td>rgrimes@gmail.com</td>
+          <td>555-555-5555</td>
+        </tr>
+        <tr>
+          <td>Daryl Dixon</td>
+          <td>ddixon@gmail.com</td>
+          <td>123-456-7788</td>
+        </tr>
+        <tr>
+          <td>Glen Rhee</td>
+          <td>grhee@gmail.com</td>
+          <td>999-777-8888</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr>
+
+  <!-- GRID SYSTEM -->
+  <!-- Bulmer uses flexbox behind the scenes -->
+  <div class="block">
+    <div class="columns">
+      <div class="column">
+        <p class="notification">First Column</p>
+      </div>
+      <div class="column">
+        <p class="notification">Second Column</p>
+      </div>
+      <div class="column">
+        <p class="notification">Third Column</p>
+      </div>
+      <div class="column">
+        <p class="notification">Fourth Column</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="columns">
+      <div class="column is-2">
+        <p class="notification">2 Column</p>
+      </div>
+      <div class="column is-8">
+        <p class="notification">8 Column</p>
+      </div>
+      <div class="column is-2">
+        <p class="notification">2 Column</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="columns">
+      <div class="column is-three-quarters">
+        <p class="notification">is-three-quarters</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <p class="notification">is-two-thirds</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="columns">
+      <div class="column is-half">
+        <p class="notification">is-half</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+      <div class="column">
+        <p class="notification">Auto</p>
+      </div>
+    </div>
+  </div>
 
   </div> <!-- container -->
 </body>
