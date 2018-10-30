@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- see the Bulma cloudfare details here https://cdnjs.com/libraries/bulma 
+	     and the getting started https://bulma.io/documentation/overview/start/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+	
+	<!-- you need to use this viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- and to use font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<title>Basic Bulma</title>
+</head>
+
+<section class="section">
+  <p>
+  Having a look at tabs in Bulma... https://bulma.io/documentation/components/tabs/ <br>
+  
+	<div class="tabs">
+	  <ul>
+		<li class="is-active"><a>Pictures</a></li>
+		<li><a>Music</a></li>
+		<li><a>Videos</a></li>
+		<li><a>Documents</a></li>
+	  </ul>
+	</div>
+	
+	To align the tabs list, use the is-centered or is-right modifier on the .tabs container:
+	<div class="tabs is-centered">
+	  <ul>
+		<li class="is-active"><a>Pictures</a></li>
+		<li><a>Music</a></li>
+		<li><a>Videos</a></li>
+		<li><a>Documents</a></li>
+	  </ul>
+	</div>
+	
+	We can add icons...
+	<div class="tabs is-centered">
+	  <ul>
+		<li class="is-active">
+		  <a>
+			<span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+			<span>Pictures</span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+			<span>Music</span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+			<span>Videos</span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+			<span>Documents</span>
+		  </a>
+		</li>
+	  </ul>
+	</div>
+	
+	http://konpa.github.io/devicon/ is nice, but no R icon... <br>
+	I saved these down instead...
+	<div class="tabs is-centered">
+	  <ul>
+		<li class="is-active">
+		  <a>
+			<span class="icon is-large"><img src="python_logo.png" alt="Python"></i></span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-large"><img src="r_logo.png" alt="R"></i></span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-large"><img src="julia_logo.png" alt="Julia"></i></span>
+		  </a>
+		</li>
+		<li>
+		  <a>
+			<span class="icon is-large"><img src="c_logo.png" alt="c"></span>
+		  </a>
+		</li>
+	  </ul>
+	</div>
+	
+  </p>
+</section>

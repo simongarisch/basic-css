@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- see the Bulma cloudfare details here https://cdnjs.com/libraries/bulma 
+	     and the getting started https://bulma.io/documentation/overview/start/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+	
+	<!-- you need to use this viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- and to use font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<title>Basic Bulma</title>
+</head>
+
+<body>
+  <!-- 
+  Most Bulma elements have alternative styles. To apply them, 
+  you only need to append one of the modifier classes. 
+  They all start with is- or has-
+  https://bulma.io/documentation/modifiers/syntax/
+  -->
+  <section class="section">
+    <h1 class="title is-1">Modifying some buttons</h1>
+	
+    <a class="button">
+      Button with class="button"
+    </a> <br>
+	
+	<a class="button is-primary">
+	  Button with class="button"
+	</a> <br>
+	
+	<a class="button is-link">
+	  Button with class="button is-primary"
+	</a> <br>
+	
+	<a class="button is-info">
+	  Button with class="button is-info"
+	</a> <br>
+	
+	<a class="button is-success">
+	  Button with class="button is-success"
+	</a> <br>
+	
+	<a class="button is-warning">
+	  Button with class="button is-warning"
+	</a> <br>
+	
+	<a class="button is-danger">
+	  Button with class="button is-danger"
+	</a> <br>
+	
+  </section>
+  <!-- ******************************** -->
+  
+  <section class="section">
+  <h1 class="title is-1"> On the button size</h1>
+ 
+	<a class="button is-small">
+	  Button with class="button is-small"
+	</a> <br>
+
+	<a class="button">
+	  Button with class="button"
+	</a> <br>
+
+	<a class="button is-medium">
+	  Button with class = "button is-medium"
+	</a> <br>
+	
+	<a class="button is-large">
+	  Button with class="button is-large"
+	</a> <br>
+
+  </section>
+  <!-- ******************************** -->
+  
+  <section class="section">
+	<a class="button is-primary is-outlined">
+	  Button with class="button is-primary is-outlined"
+	</a> <br>
+	
+	<a class="button is-loading">
+	  Button with class="button is-loading"
+	</a> <br>
+	
+	<a class="button" disabled>
+	  Button with class="button" disabled
+	</a> <br>
+	
+  </section>
+  
+  <section class="section">
+	<a class="button is-primary is-small" disabled>
+	  Button with class="button is-primary is-small" disabled
+	</a> <br>
+	
+	<a class="button is-info is-loading">
+	  Button with class="button is-info is-loading"
+	</a> <br>
+
+	<a class="button is-danger is-outlined is-large">
+	  Button with class="button is-danger is-outlined is-large"
+	</a> <br>
+
+  </section>
+  <hr>
+  
+  <section class="section">
+    <h1 class="title is-1">Helpers</h1>
+    <p>Apply helper classes to almost any element, in order to alter its style</p>
+	
+	<pre>
+	Float is-clearfix	    Fixes an element's floating children
+		  is-pulled-left	Moves an element to the left
+		  is-pulled-right	Moves an element to the right
+	
+	Spacing	is-marginless	Removes any margin
+			is-paddingless	Removes any padding
+
+	Other	is-overlay		Completely covers the first positioned parent
+			is-clipped		Adds overflow hidden
+			is-radiusless	Removes any radius
+			is-shadowless	Removes any shadow
+			is-unselectable	Prevents the text from being selectable
+			is-invisible	Adds visibility hidden
+			is-sr-only		Hide elements visually but keep the element available to be announced by a screen reader
+	</pre>
+	
+	<p> For example, a button that is floating right and marginless </p>
+	<a class="button is-danger is-large is-pulled-right is-marginless">
+	  Button with class="button is-danger is-large is-pulled-right is-marginless"
+	</a> <br>
+
+  </section>
+  <hr>
+  
+  <section class="section">
+    <p> There is a section on <a href="https://bulma.io/documentation/modifiers/responsive-helpers/">responsive helpers</a></p>
+  </section>
+  <hr>
+  
+  <section class="section">
+    <p> In addition to <a href="https://bulma.io/documentation/modifiers/color-helpers/">colour helpers</a></p>
+	<p>
+	For example, we can do... <br>
+	<a class="button has-background-success">
+	  Button with class="button has-background-success"
+	</a> <br>
+	</p>
+  </section>
+  <hr>
+  
+  <section class="section">
+	<p> There are also <a href="https://bulma.io/documentation/modifiers/typography-helpers/">typography helpers</a></p>
+  </section>
+  
+</body>
+
+</html>

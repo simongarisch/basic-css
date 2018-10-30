@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- see the Bulma cloudfare details here https://cdnjs.com/libraries/bulma 
+	     and the getting started https://bulma.io/documentation/overview/start/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+	
+	<!-- you need to use this viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- and to use font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<title>Some code in Bulma</title>
+</head>
+
+<body>
+
+<section class="section">
+  <p>
+	<div class="tabs is-centered is-toggle-rounded">
+	  <ul>
+	  
+		<li class="tablink is-active" onclick="openCode(event, 'python')">
+		  <a>
+			<span class="icon is-large">
+			<img src="python_logo.png" alt="Python"></i></span>
+		  </a>
+		</li>
+		
+		<li class="tablink" onclick="openCode(event, 'r')">
+		  <a>
+			<span class="icon is-large">
+			<img src="r_logo.png" alt="R"></i></span>
+		  </a>
+		</li>
+		
+		<li class="tablink" onclick="openCode(event, 'julia')">
+		  <a>
+			<span class="icon is-large">
+			<img src="julia_logo.png" alt="Julia"></i></span>
+		  </a>
+		</li>
+
+		<li class="tablink" onclick="openCode(event, 'c')">
+		  <a>
+			<span class="icon is-large">
+			<img src="c_logo.png" alt="c"></span>
+		  </a>
+		</li>
+
+	  </ul>
+	</div>
+	
+  </p>
+</section>
+
+<!-- Tab content -->
+<div id="python" class="tabcontent">
+  <section class="section">
+  <p>Some Python code here...</p>
+  </section>
+</div>
+
+<div id="r" class="tabcontent">
+  <section class="section">
+  <p>Some R code here...</p>
+  </section>
+</div>
+
+<div id="julia" class="tabcontent">
+  <section class="section">
+  <p>Some Julia code here...</p>
+  </section>
+</div>
+
+<div id="c" class="tabcontent">
+  <section class="section">
+  <p>Some C code here...</p>
+  </section>
+</div>
+
+<hr>
+
+<section class="section">
+  <a id="btn" class="button is-large is-warning is-fullwidth">
+    Run dat js!
+  </a> <br>
+<section>
+
+<!-- ************* -->
+<!-- add in the js -->
+<script type="text/javascript" src="show_code.js"></script>
+
+</body>
+
