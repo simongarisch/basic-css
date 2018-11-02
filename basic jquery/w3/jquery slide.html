@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- W3.CSS is free to use. No license is necessary. -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#show_me").mouseenter(function(){
+          $("div").fadeIn(3000);
+          alert("Fading in!");
+      });
+
+      $("#hide_me").mouseenter(function(){
+        $("div").fadeOut(3000);
+        alert("Fading out!");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- getting a panel ready -->
+  <!-- the panel creation example isn't quite complete -->
+  <p class="flip">Click to slide down/up the panel</p>
+  <div class="panel" style="display: block">
+    <p>Line 1</p>
+    <p>Line 2</p>
+  </div>
+  <hr>
+
+</body>
+</html>
