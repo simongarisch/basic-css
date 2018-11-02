@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <style>
+    p{
+      width: 250px;
+    }
+    div{
+      background-color: orange;
+      width: 300px;
+      height: 300px;
+    }
+    #show_me{
+      background-color: green;
+    }
+    #hide_me{
+      background-color: red;
+    }
+  </style>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#show_me").mouseenter(function(){
+          $("div").fadeIn(3000);
+          alert("Fading in!");
+      });
+
+      $("#hide_me").mouseenter(function(){
+        $("div").fadeOut(3000);
+        alert("Fading out!");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--  the div can fade in and out over x seconds -->
+  <p id="hide_me">Hover over me to fade the div out...</p>
+  <div></div>
+
+  <p id="show_me">Hover over me to fade the div in...</p>
+
+</body>
+</html>
