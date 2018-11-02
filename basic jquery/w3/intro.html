@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("p").click(function(){
+          alert("Is this thing on?");
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- The purpose of jQuery is to make it much easier to use JavaScript on your website. -->
+  <!-- jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish,
+       and wraps them into methods that you can call with a single line of code. -->
+  <!-- The basic syntax is: $(selector).action() -->
+  <!-- It is good practice to wait for the document to be fully loaded and ready before
+       working with it. This also allows you to have your JavaScript code before the body
+       of your document, in the head section. -->
+
+  <!-- p(lorem10)*5 -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, rem.</p>
+  <p>Aliquid fuga quas maiores similique sapiente excepturi nostrum, iusto consequatur.</p>
+  <p>At a quidem quasi consequuntur corporis nemo, accusamus alias quae.</p>
+  <p>Rerum odit molestias, quis, id ut voluptatum adipisci libero facilis?</p>
+  <p>Eveniet sapiente dolore architecto exercitationem dicta rerum vel odit atque.</p>
+
+</body>
+</html>

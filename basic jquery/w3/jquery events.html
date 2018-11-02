@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("p").click(function(){
+        var msg = "You clicked on a paragraph in the page!\n";
+
+        msg += $("p").text();
+        alert(msg);
+        // this will print out all of the paragraphs
+      });
+
+      $("#my_header").click(function(){
+        var msg = "We can also reference a section by id!\n";
+        msg += $("#my_header").text();
+        alert(msg);
+      });
+
+      $("#p2").mouseenter(function(){
+          alert("You entered p2!");
+      });
+
+      $("#reactive_button").hover(function(){
+          $("#reactive_button").text("Please...");
+      });
+      $("#reactive_button").mouseleave(function(){
+          $("#reactive_button").text("Where are you going?..");
+      });
+
+  });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  Mouse Events	  Keyboard Events	  Form Events	  Document/Window Events
+  click	          keypress	        submit	      load
+  dblclick	      keydown	          change	      resize
+  mouseenter	    keyup	            focus	        scroll
+  mouseleave	 	                    blur	        unload
+  -->
+  <h1 id="my_header">This is a header</h1>
+
+  <!-- p(lorem10)*5 -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, eligendi.</p>
+  <p id="p2">Odio veritatis quis at nobis perspiciatis, omnis minus et porro.</p>
+  <p>Necessitatibus, non, nisi. Nemo iusto voluptate, tenetur quasi at impedit.</p>
+  <p>Facilis libero ipsa aperiam magni. Accusamus accusantium minima praesentium sint.</p>
+  <p>Nobis provident, ea molestiae culpa porro ipsam, deserunt magnam veniam.</p>
+
+  <button type="button" id="reactive_button">Click Me!</button>
+
+</body>
+
+</html>

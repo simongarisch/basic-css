@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <style>
+    p{
+      width: 250px;
+    }
+    #show_me{
+      background-color: green;
+    }
+    #hide_me{
+      background-color: red;
+    }
+    #toggle_me{
+      background-color: orange;
+    }
+  </style>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#show_me").mouseenter(function(){
+          $("button").show();
+          alert("Showing the button!");
+      });
+
+      $("#hide_me").mouseenter(function(){
+        $("button").hide();
+        alert("Hiding the button!");
+      });
+
+      $("#toggle_me").mouseenter(function(){
+        $("button").toggle();
+        alert("Toggling between show and hide!");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <p id="hide_me">Hover over me to hide the button...</p>
+  <button class="button">Click me!</button>
+
+  <p id="show_me">Hover over me to show the button...</p>
+  <p id="toggle_me">Hover over me to toggle...</p>
+
+</body>
+</html>
