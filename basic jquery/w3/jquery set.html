@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#btn1").click(function(){
+          $("#test").text("Resetting the text of test para");
+      });
+      $("#btn2").click(function(){
+          var content = "This is a paragraph with the id <span style='font-weight:bold'>#test</span>"
+          $("#test").html(content);
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  text() - Sets or returns the text content of selected elements
+  html() - Sets or returns the content of selected elements (including HTML markup)
+  val() - Sets or returns the value of form fields
+  -->
+  <p id="test">This is a paragraph with the id <span style="font-weight:bold">#test</span></p>
+
+  <button class="button" id="btn1">Change the paragraph text</button> <br>
+  <hr>
+  <button class="button" id="btn2">Change the paragraph html</button>
+
+</body>
+
+</html>
