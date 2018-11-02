@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <style>
+    p{
+      width: 400px;
+    }
+    #test_p1{
+      background-color: red;
+    }
+    #test_p2{
+      background-color: green;
+    }
+  </style>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#append_btn").click(function(){
+          $("body").append("<p>An appended paragraph!</p>");
+      });
+
+      $("#prepend_btn").click(function(){
+          $("body").prepend("<p>An prepended paragraph</p>");
+      });
+
+      $("#after_btn").click(function(){
+          $("#test_p2").after("<p>Placed after test_p2</p>");
+      });
+
+      $("#before_btn").click(function(){
+          $("#test_p1").before("<p>Placed before test_p1</p>");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  We will look at four jQuery methods that are used to add new content:
+  append() - Inserts content at the end of the selected elements
+  prepend() - Inserts content at the beginning of the selected elements
+  after() - Inserts content after the selected elements
+  before() - Inserts content before the selected elements
+  -->
+  <p id="test_p1">This is a paragraph with the id <span style="font-weight:bold">#test_p1</span></p>
+
+  <button class="button" id="append_btn">Append</button> <br>
+  <hr>
+  <button class="button" id="prepend_btn">Prepend</button> <br>
+  <hr>
+  <button class="button" id="after_btn">After test_p2</button> <br>
+  <hr>
+  <button class="button" id="before_btn">Before test_p1</button> <br>
+  <hr>
+
+  <p id="test_p2">This is a paragraph with the id <span style="font-weight:bold">#test_p2</span></p>
+
+</body>
+
+</html>
