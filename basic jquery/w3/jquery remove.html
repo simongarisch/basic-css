@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <style>
+  #toremove{
+    background-color: green;
+    width: 400px;
+  }
+  </style>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#remove_btn").click(function(){
+          $("#toremove").remove();
+      });
+
+      $("#empty_btn").click(function(){
+          $("#toremove").empty();
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  To remove elements and content, there are mainly two jQuery methods:
+  remove() - Removes the selected element (and its child elements)
+  empty() - Removes the child elements from the selected element
+  -->
+  <section id="sec1">
+    <h1>Heading for section 1</h1>
+    <!-- p(lorem10)*3 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, repellat.</p>
+    <p id="toremove">This paragraph is flagged as id='toremove'</p>
+    <p>Perspiciatis nam, quisquam iure laboriosam commodi facilis id ipsum quaerat.</p>
+    <p id="toremove">This paragraph is flagged as id='toremove'</p>
+    <p>Ab nulla consequuntur cupiditate numquam doloremque accusamus sit odio quibusdam!</p>
+  </section>
+  <hr>
+
+  <p>remove() removes the selected element(s) and its child elements.</p>
+  <button class="button" id="remove_btn">Remove on id='toremove' elements</button> <br>
+  <hr>
+
+  <p>empty() removes the child elements of the selected element(s).</p>
+  <button class="button" id="empty_btn">Empty on id='toremove' elements</button> <br>
+  <hr>
+
+</body>
+
+</html>
