@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <style>
+    body{
+      background-color: rgba(0, 0, 255, 0.2);
+    }
+  </style>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      // colour all of the body white
+      $("#to_white").click(function(){
+          $("body").css("background-color", "white");
+      });
+
+      $("#test_parent").click(function(){
+          $("#some_span").parent().css("background-color", "orange");
+      });
+
+      $("#test_parents").click(function(){
+          $("#some_span2").parents().css("background-color", "blue");
+      });
+
+      $("#test_parentsUntil").click(function(){
+          $("#some_span2").parentsUntil("section").css("background-color", "green");
+      });
+
+      $("#test_parentsUntil2").click(function(){
+          $("#some_span2").parentsUntil("body").css("background-color", "red");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  jQuery traversing, which means "move through", are used to "find" (or select)
+  HTML elements based on their relation to other elements. Start with one selection
+  and move through that selection until you reach the elements you desire.
+
+  Three useful jQuery methods for traversing up the DOM tree are:
+  parent()
+  parents()
+  parentsUntil()
+  -->
+
+  <button class="button" id="to_white">Colour everything white</button> <br>
+  <hr>
+
+  <section>
+    <h1>The heading for our section...</h1>
+    <!-- p(lorem10)*5 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, totam?</p>
+    <p>Amet molestiae voluptas ex at repudiandae esse quibusdam hic voluptates.</p>
+    <p>Ipsa dicta non, aperiam reprehenderit quaerat rerum, tempore minima nobis.</p>
+    <p>Iusto, aspernatur rerum obcaecati nam <span id="some_span" style="font-weight:bold">has id='some_span'</span> velit</p>
+    <p>In pariatur, <span id="some_span2" style="font-weight:bold">has id='some_span2'</span> ratione voluptas quia adipisci.</p>
+  </section>
+
+  <hr>
+  <button class="button" id="test_parent">Colour parent of id='some_span' orange</button> <br>
+  <hr>
+
+  <button class="button" id="test_parents">Colour parents of id='some_span2' blue</button> <br>
+  <hr>
+
+  <button class="button" id="test_parentsUntil">Colour green parents of id='some_span2' with parentsUntil("section")</button> <br>
+  <hr>
+
+  <button class="button" id="test_parentsUntil2">Colour red parents of id='some_span2' with parentsUntil("body")</button> <br>
+  <hr>
+
+</body>
+
+</html>
