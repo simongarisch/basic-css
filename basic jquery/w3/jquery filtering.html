@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      $("#test_children").click(function(){
+          $("h1").siblings("p").css("background-color", "green");
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!--
+  The first(), last(), eq(), filter() and not() Methods
+  The most basic filtering methods are first(), last() and eq(), which allow you
+  to select a specific element based on its position in a group of elements
+  -->
+
+  <section>
+    <h1>The heading for our section...</h1>
+    <!-- p(lorem10)*5 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, totam?</p>
+    <p>Amet molestiae voluptas ex at repudiandae esse quibusdam hic voluptates.</p>
+    <p>Ipsa dicta non, aperiam reprehenderit quaerat rerum, tempore minima nobis.</p>
+    <p>Iusto, aspernatur rerum obcaecati nam <span id="some_span" style="font-weight:bold">has id='some_span'</span> velit</p>
+    <p>In pariatur, <span id="some_span2" style="font-weight:bold">has id='some_span2'</span> ratione voluptas quia adipisci.</p>
+  </section>
+
+  <hr>
+  <button class="button" id="test_children">Colour siblings of h1 that are p green </button> <br>
+  <hr>
+
+</body>
+
+</html>
