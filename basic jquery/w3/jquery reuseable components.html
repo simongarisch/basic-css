@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- we also need to include jquery ui in order to use the widget class -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- load your progressbar widget -->
+  <script src="progressbar.js"></script>
+
+  <!-- run jquery functions when the document has loaded -->
+  <script>
+    $(document).ready(function(){
+      // jQuery methods go here...
+      var bar = $( "<div></div>" )
+          .appendTo( "body" )
+          .progressbar({ value: 20 });
+
+      // Get the current value.
+      alert( bar.progressbar( "value" ) );
+
+      // Update the value.
+      bar.progressbar( "value", 50 );
+
+      // Get the current value again.
+      alert( bar.progressbar( "value" ) );
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- reuseable progressbar -->
+
+</body>
+
+</html>
