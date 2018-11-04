@@ -9,8 +9,33 @@
   <script>
     $(document).ready(function(){
       // jQuery methods go here...
-      $("#test_children").click(function(){
-          $("h1").siblings("p").css("background-color", "green");
+
+      // colour all paragraphs of section 1 blue
+      $("#test").click(function(){
+        $("#section1 > p").css("background-color", "blue");
+      });
+
+      // colour first paragraph of section 1 blue
+      $("#test_first").click(function(){
+        $("#section1 > p").first().css("background-color", "blue");
+      });
+
+      // colour last paragraph of section 1 blue
+      $("#test_last").click(function(){
+        $("#section1 > p").last().css("background-color", "blue");
+      });
+
+      // colour the paragraph blue at index = 2
+      $("#test_eq").click(function(){
+        $("#section1 > p").eq(2).css("background-color", "blue");
+      });
+
+      $("#test_filter").click(function(){
+        $("section").filter("#section2").css("background-color", "blue");
+      });
+
+      $("#test_not").click(function(){
+        $("#section1").not("#section2").css("background-color", "blue");
       });
 
     });
@@ -25,18 +50,39 @@
   to select a specific element based on its position in a group of elements
   -->
 
-  <section>
-    <h1>The heading for our section...</h1>
+  <section id="section1">
+    <h1>The heading for section 1...</h1>
     <!-- p(lorem10)*5 -->
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, totam?</p>
     <p>Amet molestiae voluptas ex at repudiandae esse quibusdam hic voluptates.</p>
     <p>Ipsa dicta non, aperiam reprehenderit quaerat rerum, tempore minima nobis.</p>
-    <p>Iusto, aspernatur rerum obcaecati nam <span id="some_span" style="font-weight:bold">has id='some_span'</span> velit</p>
-    <p>In pariatur, <span id="some_span2" style="font-weight:bold">has id='some_span2'</span> ratione voluptas quia adipisci.</p>
+    <p>Iusto, aspernatur rerum obcaecati nam velit</p>
+    <p>In pariatur, ratione voluptas quia adipisci.</p>
+  </section>
+
+  <section id="section2">
+    <h1>The heading for section 2...</h1>
+    <!-- p(lorem10)*5 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, totam?</p>
+    <p>Amet molestiae voluptas ex at repudiandae esse quibusdam hic voluptates.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, aut!</p>
+    <p>Iusto, aspernatur rerum obcaecati nam velit</p>
+    <p>In pariatur, ratione voluptas quia adipisci.</p>
   </section>
 
   <hr>
-  <button class="button" id="test_children">Colour siblings of h1 that are p green </button> <br>
+  <button class="button" id="test">Colour all p of section 1 blue</button> <br>
+  <hr>
+  <button class="button" id="test_first">Colour first p of section 1 blue</button> <br>
+  <hr>
+  <button class="button" id="test_last">Colour last p of section 1 blue</button> <br>
+  <hr>
+  <button class="button" id="test_eq">Colour index=2 p of section 1 blue</button> <br>
+  <hr>
+  <button class="button" id="test_filter">Colour section blue where id = section2</button> <br>
+  <hr>
+  <!-- not is the opposite of filter -->
+  <button class="button" id="test_not">Colour section blue where id != section2</button> <br>
   <hr>
 
 </body>
