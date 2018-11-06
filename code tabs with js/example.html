@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Tabs</title>
+
+  <!-- see the Bulma cloudfare details here https://cdnjs.com/libraries/bulma
+	     and the getting started https://bulma.io/documentation/overview/start/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
+	<!-- you need to use this viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- and to use font awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <!-- see https://highlightjs.org/usage/
+	minimum requirements for usage: https://highlightjs.org/usage/
+	https://github.com/highlightjs/highlight.js/tree/master/src/languages
+    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github-gist.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="example.js"></script>
+</head>
+
+<body>
+<script>create_code_tabs("snippets/fib"); showFirstOnly();</script>
+</body>
+
+</html>
