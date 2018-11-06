@@ -1,0 +1,35 @@
+<!-- https://stackoverflow.com/questions/31746837/reading-uploaded-text-file-contents-in-html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery</title>
+
+  <!-- Google CDN (Content Delivery Network) for jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<pre><code id="pycode"></code></pre>
+
+</body>
+
+<script type="text/javascript">
+  function loadFileAsText(){
+    var fileToLoad = "./fib.py";
+
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent){
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        document.getElementById("pycode").text(textFromFileLoaded);
+        alert(textFromFileLoaded);
+    };
+
+    fileReader.readAsText(fileToLoad, "UTF-8");
+  }
+  loadFileAsText()
+</script>
+
+</html>
