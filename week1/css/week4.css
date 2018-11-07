@@ -1,0 +1,117 @@
+
+/* I'll place the table styling at the top so that it's seen first */
+
+/* requirements for styling the table */
+table{
+    margin: auto; /* center the table */
+	width: 75%;   /* use most of the available space */
+	font-family: Helvetica, "Times New Roman", serif; /* choose fonts you like */
+	font-size: 120%;   /* make the font size a bit larger */
+	line-height: 120%; /* spread the table out */
+	padding: 2%;       /* add some padding to give the table some space */
+}
+
+/* the table header */
+th{
+    background-image: linear-gradient(to bottom right, rgba(140, 170, 130, 0.5), rgba(170, 220, 160, 0.5));
+	border: solid rgba(140, 170, 130, 0.5);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-width: thick;
+	padding: 1%;
+	color: rgba(255, 255, 255, 1.0);
+	text-align: center;
+}
+
+th::first-letter{
+    font-size: 110%;
+}
+
+/* moving onto the table rows */
+tr{
+    background-color: rgba(100, 150, 80, 0.2);
+	opacity: 0.8;
+}
+
+td{
+	padding: 1%;
+	text-align: center;
+	color: rgba(0, 0, 0, 1.0);
+	background-color: rgba(100, 150, 80, 0.2);
+	border-style: solid;
+	border-width: thin;
+	border-color: rgba(255, 255, 255, 0.5);
+	border-radius: 2px;
+}
+
+/* the table headers have been text-aligned center by default 
+   for the first table header we want to align this to the left 
+*/
+tr  th:first-child, td:first-child{
+    text-align: left;	
+}
+
+/* set the opacity to 1 when hovered over */
+tr:hover{
+  opacity: 1.0;	
+}
+
+/* *************************************************************** */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: url('../images/flywheel.jpg') no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 35px 0
+}
+
+header h1{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header nav a{
+    background: rgba(255, 255, 255, 0.4);
+    padding: 12px 40px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0 20px
+}
+
+header nav a.active{
+    background: rgb(255, 255, 255);
+    padding: 12px 40px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0 20px
+}
+
+aside{
+    width: 15%;
+    height: 510px;
+    float: left;
+    padding: 20px 30px;
+    background: #777613
+}
+
+aside img{
+    width: 100%;
+    height: 150px;
+    border: 2px solid #000
+}
+
+main section{
+    display: inline-block;
+    width: 80%;
+    padding-left: 5px
+}
