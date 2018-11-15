@@ -13,55 +13,134 @@
 
   <body>
 
-    <!-- 3 equal width columns -->
-    <div class="row">
-      <div class="col">.col</div>
-      <div class="col">.col</div>
-      <div class="col">.col</div>
+    <!-- Bootstrap's grid system allows up to 12 columns across the page.
+    If you do not want to use all 12 column individually, you can group the columns together to create wider columns
+    .col- (extra small devices - screen width less than 576px)
+    .col-sm- (small devices - screen width equal to or greater than 576px)
+    .col-md- (medium devices - screen width equal to or greater than 768px)
+    .col-lg- (large devices - screen width equal to or greater than 992px)
+    .col-xl- (xlarge devices - screen width equal to or greater than 1200px) -->
+    <div class="container-fluid">
+      <h1>Basic Grid Structure</h1>
+      <p>Resize the browser window to see the effect.</p>
+      <p>The first, second and third row will automatically stack on top of each other when the screen is less than 576px wide.</p>
+
+      <div class="container-fluid">
+        <!-- Control the column width, and how they should appear on different devices -->
+        <div class="row">
+          <div class="col-sm-6" style="background-color:yellow;">50%</div>
+          <div class="col-sm-6" style="background-color:orange;">50%</div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
+          <div class="col-sm-4" style="background-color:orange;">33.33%</div>
+          <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
+        </div>
+        <br>
+
+        <!-- Or let Bootstrap automatically handle the layout -->
+        <div class="row">
+          <div class="col-sm" style="background-color:yellow;">25%</div>
+          <div class="col-sm" style="background-color:orange;">25%</div>
+          <div class="col-sm" style="background-color:yellow;">25%</div>
+          <div class="col-sm" style="background-color:orange;">25%</div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col" style="background-color:yellow;">25%</div>
+          <div class="col" style="background-color:orange;">25%</div>
+          <div class="col" style="background-color:yellow;">25%</div>
+          <div class="col" style="background-color:orange;">25%</div>
+        </div>
+      </div>
     </div>
-
     <hr>
-    <p>Two unequal responsive columns</p>
-    <div class="row">
-      <div class="col-sm-4">.col-sm-4</div>
-      <div class="col-sm-8">.col-sm-8</div>
-    </div>
 
-    <hr>
-    <p>See some of the <a href="https://www.w3schools.com/bootstrap4/bootstrap_typography.asp">typography options</a></p>
-
+    <!-- We will create a basic grid system that starts out stacked on extra small devices, before becoming horizontal on larger devices. -->
     <div class="container">
-      <h2>Contextual Colors</h2>
-      <p>Use the contextual classes to provide "meaning through colors":</p>
-      <p class="text-muted">This text is muted.</p>
-      <p class="text-primary">This text is important.</p>
-      <p class="text-success">This text indicates success.</p>
-      <p class="text-info">This text represents some information.</p>
-      <p class="text-warning">This text represents a warning.</p>
-      <p class="text-danger">This text represents danger.</p>
-      <p class="text-secondary">Secondary text.</p>
-      <p class="text-dark">This text is dark grey.</p>
-      <p class="text-body">Default body color (often black).</p>
-      <p class="text-light">This text is light grey (on white background).</p>
-      <p class="text-white">This text is white (on white background).</p>
+      <h1>Grid Example</h1>
+      <p>This example demonstrates a 50%/50% split on small, medium, large and xlarge devices. On extra small devices, it will stack (100% width).</p>
+      <p>Resize the browser window to see the effect.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 bg-success">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div class="col-sm-6 bg-warning">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+          </div>
+        </div>
+      </div>
     </div>
     <hr>
 
-    <div class="container">
-      <p>Contextual text classes can also be used on links, which will add a darker hover color</p>
-      <h2>Contextual Link Colors</h2>
-      <p>Hover over the links.</p>
-      <a href="#" class="text-muted">Muted link.</a>
-      <a href="#" class="text-primary">Primary link.</a>
-      <a href="#" class="text-success">Success link.</a>
-      <a href="#" class="text-info">Info link.</a>
-      <a href="#" class="text-warning">Warning link.</a>
-      <a href="#" class="text-danger">Danger link.</a>
-      <a href="#" class="text-secondary">Secondary link.</a>
-      <a href="#" class="text-dark">Dark grey link.</a>
-      <a href="#" class="text-body">Body/black link.</a>
-      <a href="#" class="text-light">Light grey link.</a>
+    <!-- Remember you can turn any fixed-width layout into a full-width layout by changing the .container class to .container-fluid -->
+    <div class="container-fluid">
+      <h1>Grid Example</h1>
+      <p>This example demonstrates a 50%/50% split on small, medium, large and xlarge devices. On extra small devices, it will stack (100% width).</p>
+      <p>Resize the browser window to see the effect.</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 bg-success">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div class="col-sm-6 bg-warning">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+          </div>
+        </div>
+      </div>
     </div>
+    <hr>
+
+
+    <div class="container-fluid">
+      <h1>Auto Layout Columns</h1>
+      <p>In Bootstrap 4, there is an easy way to create equal width columns: just use the <code>.col-size</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
+      <p>Two columns: 50% width on all screens, except for extra small (100% width on screens less than <strong>576px</strong> wide)</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-success">1 of 2</div>
+          <div class="col-sm bg-warning">2 of 2</div>
+        </div>
+      </div>
+      <br>
+
+      <p>Four columns: 25% width on all screens, except for extra small (100% width on screens less than <strong>576px</strong> wide)</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm bg-success">1 of 4</div>
+          <div class="col-sm bg-warning">2 of 4</div>
+          <div class="col-sm bg-success">3 of 4</div>
+          <div class="col-sm bg-warning">4 of 4</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- nested columns -->
+    <div class="container-fluid">
+      <h2>Nested Columns</h2>
+      <p>Add columns inside other columns:</p>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8 bg-warning">
+          .col-8
+          <div class="row">
+            <div class="col-6 bg-light">.col-6</div>
+            <div class="col-6 bg-secondary">.col-6</div>
+          </div>
+        </div>
+        <div class="col-4 bg-success">.col-4</div>
+      </div>
+    </div>
+    <hr>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
