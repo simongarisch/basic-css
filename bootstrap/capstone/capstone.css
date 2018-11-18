@@ -1,0 +1,7 @@
+
+/* let the carousel images grow if the screen gets very large */
+@media (min-width: 2500px) {
+  .carousel_image {
+    width: 100%;
+  }
+}
