@@ -5,3 +5,7 @@
     width: 100%;
   }
 }
+
+header a {
+  transition: ease-in-out color .5s;
+}
