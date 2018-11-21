@@ -5,7 +5,6 @@ Find the sum of all the primes below two million.
 
 function is_prime(x){
   // will return true if number is prime, false otherwise
-
   if(x==2 || x==3){ // 2 and 3 are primes
     return true;
   }

@@ -16,10 +16,11 @@ header a {
   padding-bottom: 15px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .nav.nav-tabs {
     float: left;
     display: block;
     padding-right: 15px;
+    height: 100vh;
   }
 }
