@@ -13,8 +13,22 @@
 
   <body>
 
-    
+    <div class="container py-3">
+      <h1 class="display-4 text-center text-primary p-3">Testing a notebook in an iframe</h1>
 
+      <p class="text-center">Perhaps change the underlying notebook html instead...</p>
+
+      <!-- first add a video going over the notebook -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      </div>
+
+      <!-- the the notebook -->
+      <div class="embed-responsive embed-responsive-1by1 py-3">
+        <iframe src='http://nbviewer.jupyter.org/gist/minrk/4358066/Gun%20Data.ipynb' style='border:0;'></iframe>
+      </div>
+
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
