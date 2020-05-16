@@ -1,0 +1,15 @@
+Looks like they are using
+
+https://owlcarousel2.github.io/OwlCarousel2/
+https://www.npmjs.com/package/owl.carousel
+
+https://linearicons.com/
+https://www.npmjs.com/package/linearicons
+
+https://github.com/hernansartorio/jquery-nice-select
+https://www.npmjs.com/package/jquery-nice-select
+
+https://github.com/paulgeorge92/DonutWidget
+
+https://www.npmjs.com/package/superfish
+https://github.com/joeldbirch/superfish/
