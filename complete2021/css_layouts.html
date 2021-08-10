@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layout and Positioning</title>
+
+    <style>
+        #div-static {
+            position: static;
+            border: 1px solid #73AD21;
+        }
+
+        #div-relative {
+            position: relative;
+            left: 30px;
+            border: 1px solid #73AD21;
+        }
+
+        #div-fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 1px solid blue;
+        }
+
+        #div-absolute {
+            position: absolute;
+            top: 80px;
+            right:0;
+            width: 200px;
+            height: 100px;
+            border: 1px solid yellow;
+        }
+
+        #div-sticky {
+            position: sticky;
+            top: 0;
+            background-color: aliceblue;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Layout and Positioning</h2>
+    <p>The position property specifies the type of positioning method used for an element
+    (static, relative, fixed, absolute or sticky).
+    </p>
+
+    <p>HTML elements are positioned static by default.
+       Static positioned elements are not affected by the top, bottom, left and right properties.
+    </p>
+
+    <div id="div-static">This is an example div which will have a static position by default.
+        It'll always be positioned according to the normal flow of the page.
+    </div>
+
+    <div id="div-relative">
+        An element with position: relative is positioned relative to its normal position.
+    </div>
+
+    <div id="div-fixed">
+        An element with position: fixed is positioned relative to the viewport,
+        which means it always stays in the same place even if the page is scrolled.
+        The top, right, bottom, and left properties are used to position the element.
+    </div>
+
+    <div>
+        An element with position: absolute; is positioned relative to the nearest positioned ancestor
+        (instead of positioned relative to the viewport, like fixed).
+        <div id="div-absolute">
+            This div element has position: absolute
+        </div>
+    </div>
+
+    <div id="div-sticky">
+        An element with position: sticky; is positioned based on the user's scroll position.
+    </div>
+
+    <div>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+        <p>This is a filler line...</p>
+    </div>
+</body>
+
+</html>

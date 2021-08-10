@@ -1,0 +1,15 @@
+body {
+    background-color: #A0937D;
+}
+
+table, td {
+    padding: 40px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+h1, h2, h3 {
+    color: #3A6351;
+}

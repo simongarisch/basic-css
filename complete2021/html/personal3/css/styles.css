@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+h1, p {
+    margin: 20px;
+}
+
+.topContainer {
+    background-color:  #E4F9F5;
+    width: 200px;
+    height: 200px;
+}
+
+.middleContainer {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.bottomContainer {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+.pro {
+    text-decoration: underline;
+}

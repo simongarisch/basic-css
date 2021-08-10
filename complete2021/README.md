@@ -12,4 +12,5 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 
 https://colorhunt.co/
 https://emojipedia.org/
+https://www.favicon.cc/
 https://www.vandelaydesign.com/beautiful-minimalist-websites/
