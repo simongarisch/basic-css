@@ -14,3 +14,11 @@ https://colorhunt.co/
 https://emojipedia.org/
 https://www.favicon.cc/
 https://www.vandelaydesign.com/beautiful-minimalist-websites/
+
+https://www.cssfontstack.com/
+https://fonts.google.com/
+
+https://www.lipsum.com/
+https://www.flaticon.com/
+https://giphy.com/
+https://css3buttongenerator.com/
