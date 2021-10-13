@@ -22,3 +22,8 @@ https://www.lipsum.com/
 https://www.flaticon.com/
 https://giphy.com/
 https://css3buttongenerator.com/
+
+https://www.codeply.com/
+http://ui-patterns.com/
+https://dribbble.com/
+https://balsamiq.com/
