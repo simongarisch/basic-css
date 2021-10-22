@@ -27,3 +27,6 @@ https://www.codeply.com/
 http://ui-patterns.com/
 https://dribbble.com/
 https://balsamiq.com/
+
+https://bootsnipp.com/
+https://search.google.com/test/mobile-friendly
