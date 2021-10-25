@@ -11,6 +11,8 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 
 
 https://colorhunt.co/
+https://color.adobe.com/create
+
 https://emojipedia.org/
 https://www.favicon.cc/
 https://www.vandelaydesign.com/beautiful-minimalist-websites/
@@ -30,3 +32,7 @@ https://balsamiq.com/
 
 https://bootsnipp.com/
 https://search.google.com/test/mobile-friendly
+
+https://www.dailyui.co/
+https://collectui.com/
+https://www.canva.com/en_gb/
