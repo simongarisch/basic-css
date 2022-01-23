@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+    >
+    <title>linreg</title>
+  </head>
+  
+  <body>
+      <div class="container">
+        <!-- title -->
+        <h2 class="p-3">linreg...</h1>
+        <p>This is more to test out the functionality for chart.js</p>
+
+        <!-- parameters form -->
+        <form>
+            <div class="form-group row">
+              <label for="mParam" class="col-sm-1 col-form-label">m</label>
+              <div class="col-sm-11">
+                <input type="text" class="form-control-plaintext" id="mParam" value="1" onchange="chart()">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="cParam" class="col-sm-1 col-form-label">c</label>
+                <div class="col-sm-11">
+                  <input type="text" class="form-control-plaintext" id="cParam" value="0" onchange="chart()">
+                </div>
+              </div>
+          </form>
+
+        <!-- canvas for charting -->
+        <canvas id="line-chart" width="800" height="450"></canvas>
+      </div>
+
+    <!-- Chart.js
+         https://www.chartjs.org/docs/3.1.0/samples/bar/vertical.html
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
+
+    <!-- Charting logic -->
+    <script>
+        // our chart
+        var lineChart = null
+
+        // param defaults
+        var m = 1
+        var c = 0
+        var errors = []
+        for (var i=-20; i<= 20; i++) {
+            errors.push(i)
+        }
+
+        // helper functions
+        function getY(x) {
+            return m*x + c
+        }
+
+        function addErrorToY(y) {
+            return y + errors[Math.floor(Math.random()*errors.length)]
+        }
+
+        // charting
+        function chart() {
+            // try to parse new params
+            mNew = parseInt(document.getElementById("mParam").value)
+            cNew = parseInt(document.getElementById("cParam").value)
+            if (!isNaN(mNew) && !isNaN(cNew)) {
+                m = mNew
+                c = cNew
+            } else {
+                alert("Could not parse params to int. Reverting to previous params...")
+            }
+            document.getElementById("mParam").value = m.toString()
+            document.getElementById("cParam").value = c.toString()
+
+            var xValues = [...Array(101).keys()]
+            var yValues = xValues.map(getY)
+            var yValuesWithError = yValues.map(addErrorToY)
+
+            if (lineChart !== null) { // make sure to destroy the line chart before a redraw
+                lineChart.destroy()
+            }
+
+            lineChart = new Chart(document.getElementById("line-chart"), {
+                type: 'line',
+                data: {
+                    labels: xValues,
+                    datasets: [
+                    { 
+                        data: yValues,
+                        label: "y = mx + c",
+                        borderColor: "#3e95cd",
+                        fill: false,
+                        showLine: true
+                    },
+                    {
+                        data: yValuesWithError,
+                        label: "Data",
+                        borderColor: "#c45850",
+                        fill: false,
+                        showLine: false
+                    }
+                ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Linear Regression'
+                        }
+                    }   
+                }
+            });
+        }
+
+        chart()
+    </script>
+
+  </body>
+</html>
