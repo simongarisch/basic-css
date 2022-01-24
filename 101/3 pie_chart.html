@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+            integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap_darkly.min.css">
+    <title>Pie Chart</title>
+
+    <style>
+        #pie-chart {
+            width: 600px !important;
+            height: 600px !important;
+            margin: auto;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container p-3">
+        <h2>Pie Chart</h2>
+        <form>
+            <label for="perc1" class="form-label">Percentage 1</label>
+            <input type="range" class="form-range" min="0" max="100" id="perc1" value="50" onchange="perc1Change()">
+            <label for="perc2" class="form-label">Percentage 2</label>
+            <input type="range" class="form-range" min="0" max="100" id="perc2" value="50" onchange="perc2Change()">
+        </form>
+
+        <!-- canvas for charting -->
+        <canvas id="pie-chart"></canvas>
+    </div>
+
+    <script>
+        function getPerc1() {
+            const perc = document.getElementById("perc1").value
+            return parseInt(perc)
+        }
+
+        function getPerc2() {
+            const perc = document.getElementById("perc2").value
+            return parseInt(perc)
+        }
+
+        function perc1Change() {
+            document.getElementById("perc2").value = (100 - getPerc1()).toString()
+            chart()
+        }
+
+        function perc2Change() {
+            document.getElementById("perc1").value = (100 - getPerc2()).toString()
+            chart()
+        }
+
+        var pieChart = null
+
+        function chart() {
+            const perc1 = getPerc1()
+            const perc2 = getPerc2()
+
+            const data = {
+                labels: [
+                    'Percentage 1',
+                    'Percentage 2',
+                ],
+                datasets: [{
+                    label: 'Percentages',
+                    data: [perc1, perc2],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                ],
+                    hoverOffset: 4
+                }]
+            };
+
+            var options = {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        position: "top",
+                        text: "Pie Chart",
+                    },
+                    legend: {
+                        display: true,
+                        position: "bottom",
+                    }
+                }
+            };
+
+            if (pieChart !== null) { // make sure to destroy the chart before a redraw
+                pieChart.destroy()
+            }
+
+            pieChart = new Chart(document.getElementById("pie-chart"), {
+                type: "pie",
+                data: data,
+                options: options
+            });
+        }
+
+        chart()
+        
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
+  </body>
+</html>
