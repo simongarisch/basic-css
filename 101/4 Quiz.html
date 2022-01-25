@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap_minty.min.css">
+
+    <title>Quiz</title>
+  </head>
+
+  <body>
+      <div class="container">
+        <h1 class="p-3">School is in...</h1>
+
+        <div class="accordian" id="accordianExample">
+            <!-- First Question-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span id="question1-feedback">Question 1</span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <form>
+                        <div class="form-group">
+                            <label for="question1-select" class="py-2">What is the meaning of life?</label>
+                            <select class="form-control" id="question1-select" onchange="answerQuestion1(this.value)">
+                              <option>39</option>
+                              <option>40</option>
+                              <option>41</option>
+                              <option>42</option>
+                              <option>43</option>
+                            </select>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Second Question-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <span id="question2-feedback">Question 2</span>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <form>
+                        <div class="form-group">
+                            <label for="question2-select" class="py-2">Should pineapple be on Pizza?</label>
+                            <select class="form-control" id="question2-select" onchange="answerQuestion2(this.value)">
+                              <option>No way Jose</option>
+                              <option>What's that? I was busy enjoying this Hawaiian pizza.</option>
+                            </select>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="quiz-tally" class="p-3"></p>
+      </div>
+
+      <script>
+          function colourGreen(element) {
+            element.classList.remove('text-danger')
+            element.classList.add('text-success')
+          }
+
+          function colourRed(element) {
+            element.classList.remove('text-success')
+            element.classList.add('text-danger')
+          }
+
+          function answerQuestion1(input) {
+              var element = document.getElementById("question1-feedback")
+              if (input.toString() == "42") {
+                  element.textContent = "Question 1 - Correct"
+                  colourGreen(element)
+              } else {
+                  element.textContent = "Question 1 - Incorrect"
+                  colourRed(element)
+              }
+              tallyQuiz()
+          }
+
+          function answerQuestion2(input) {
+              var element = document.getElementById("question2-feedback")
+              if (input.toString() == "What's that? I was busy enjoying this Hawaiian pizza.") {
+                  element.textContent = "Question 2 - Correct"
+                  colourGreen(element)
+              } else {
+                  element.textContent = "Question 2 - Incorrect"
+                  colourRed(element)
+              }
+              tallyQuiz()
+          }
+
+          function tallyQuiz() {
+            var feedback1 = document.getElementById("question1-feedback")
+            var feedback2 = document.getElementById("question2-feedback")
+            var feedbackArray = [feedback1, feedback2]
+            var answeredCount = 0, correctCount = 0, incorrectCount = 0
+
+            feedbackArray.forEach(function(element) {
+              var isAnswered = false
+              if (element.textContent.includes("Correct")) {
+                correctCount++
+                isAnswered = true
+              }
+              if (element.textContent.includes("Incorrect")) {
+                incorrectCount++
+                isAnswered = true
+              }
+              if (isAnswered) {
+                answeredCount++
+              }
+            })
+            
+            document.getElementById("quiz-tally").textContent = "Answered " + answeredCount +", " + correctCount + " Correct, " + incorrectCount + " Incorrect"
+          }
+      </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
+  </body>
+</html>
