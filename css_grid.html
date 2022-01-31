@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            /*
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+            */
+            grid-gap: 1rem;
+        }
+
+        .wrapper > div {
+            background: #eee;
+            padding: 1rem;
+        }
+
+        .wrapper > div:nth-child(odd) {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Illum quia a et consectetur repudiandae labore earum aliquam,
+            rem unde nobis, quas exercitationem odit minus corrupti,
+            vitae fugit placeat. Debitis deleniti eaque impedit expedita
+            distinctio modi temporibus corporis incidunt alias, sequi eligendi,
+            praesentium possimus officiis minima ad obcaecati? Ullam repellendus
+            excepturi, eos tempore inventore assumenda perspiciatis quidem nemo
+            error debitis alias aspernatur. Ut, rem? Voluptatem ducimus, tempore
+            nisi aut illum consectetur doloremque reiciendis nulla quasi placeat.
+            Earum culpa qui magni adipisci!
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Temporibus modi dolor voluptatum praesentium similique nostrum
+            nesciunt deserunt suscipit quo autem voluptatibus incidunt facere,
+            consectetur neque quisquam? Nihil et quisquam labore?
+        </div>
+
+        <!-- copied the two divs above -->
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Illum quia a et consectetur repudiandae labore earum aliquam,
+            rem unde nobis, quas exercitationem odit minus corrupti,
+            vitae fugit placeat. Debitis deleniti eaque impedit expedita
+            distinctio modi temporibus corporis incidunt alias, sequi eligendi,
+            praesentium possimus officiis minima ad obcaecati? Ullam repellendus
+            excepturi, eos tempore inventore assumenda perspiciatis quidem nemo
+            error debitis alias aspernatur. Ut, rem? Voluptatem ducimus, tempore
+            nisi aut illum consectetur doloremque reiciendis nulla quasi placeat.
+            Earum culpa qui magni adipisci!
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Temporibus modi dolor voluptatum praesentium similique nostrum
+            nesciunt deserunt suscipit quo autem voluptatibus incidunt facere,
+            consectetur neque quisquam? Nihil et quisquam labore?
+        </div>
+        <div>Hello</div>
+    </div>
+</body>
+</html>
