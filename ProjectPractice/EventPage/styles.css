@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgba(1, 124, 255, 0.15)
+}
+
+header {
+    text-align: center;
+}
+
+.langs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.langs div {
+    margin: 10px;
+    border: 1px solid black;
+    height: 40vh;
+}
+
+.langs div:hover {
+    transform: scale(1.05);
+}
+
+.langs div:nth-of-type(even){
+    border: 1px solid red;
+}
+
+.langs div img {
+    width: 100%;
+    height: 100%;
+}
