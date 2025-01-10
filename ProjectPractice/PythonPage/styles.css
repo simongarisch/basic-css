@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    width: 100vw;
+    background-color: rgb(30, 41, 51);
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    opacity: 0.75;
+}
+
+.navbar .active {
+    opacity: 1.0;
+}
+
+#img-python {
+    width: 50vw;
+    float: left;
+}
+
+hr {
+    border: 2px solid rgb(117, 168, 211);
+}
+
+#section-download {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#section-download div {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(117, 168, 211);
+}
+
+#section-download div h1 {
+    color: rgb(117, 168, 211);
+}
+
+#section-download div h1 i {
+    opacity: 0.5;
+}
